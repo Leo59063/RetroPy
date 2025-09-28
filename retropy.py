@@ -4,7 +4,6 @@ import time
 import json
 from pyboy import PyBoy
 
-# Make all paths relative to this script's folder
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE_DIR)
 
@@ -12,12 +11,10 @@ pygame.init()
 screen = pygame.display.set_mode((1000, 700))
 pygame.display.set_caption("RetroPy Launcher")
 
-# Fonts
 font_title = pygame.font.SysFont("Arial", 30, bold=True)
 font_desc = pygame.font.SysFont("Arial", 20)
 font_hint = pygame.font.SysFont("Arial", 16)
 
-# --- SETTINGS ---
 settings = {
     "scroll_speed": 0.15,
     "zoom_center": 1.0,
@@ -32,7 +29,6 @@ settings = {
 
 SETTINGS_FILE = "settings.json"
 
-# Load settings from JSON
 def load_settings():
     global settings
     if os.path.exists(SETTINGS_FILE):
@@ -43,7 +39,6 @@ def load_settings():
         except Exception as e:
             print("Failed to load settings:", e)
 
-# Save settings to JSON
 def save_settings():
     try:
         with open(SETTINGS_FILE, "w") as f:
@@ -53,7 +48,6 @@ def save_settings():
 
 load_settings()
 
-# --- Settings menu ---
 settings_options = [
     {"name": "Scroll Speed", "key": "scroll_speed", "min": 0.05, "max": 2.0, "step": 0.05},
     {"name": "Zoom Center", "key": "zoom_center", "min": 0.5, "max": 2.0, "step": 0.1},
@@ -63,7 +57,6 @@ settings_options = [
 ]
 current_setting_index = 0
 
-# --- LOAD ROMS ---
 def load_roms():
     roms = []
     thumbnails = {}
@@ -73,14 +66,12 @@ def load_roms():
     if not os.path.exists(rom_folder):
         os.makedirs(rom_folder)
 
-    # First, ROMs directly in the folder
     for file in os.listdir(rom_folder):
         file_path = os.path.join(rom_folder, file)
         if os.path.isfile(file_path) and file.lower().endswith((".gb", ".gbc")):
             name = os.path.splitext(file)[0]
             roms.append({"name": name, "path": file_path})
 
-            # Cover image
             cover_path = os.path.join(rom_folder, name + ".png")
             if os.path.exists(cover_path):
                 img = pygame.image.load(cover_path)
@@ -89,7 +80,6 @@ def load_roms():
                 img.fill((60, 60, 60))
             thumbnails[name] = img
 
-            # Description
             desc_path = os.path.join(rom_folder, name + ".txt")
             if os.path.exists(desc_path):
                 with open(desc_path, "r", encoding="utf-8") as f:
@@ -97,7 +87,6 @@ def load_roms():
             else:
                 descriptions[name] = ""
 
-    # Then, ROMs inside subfolders
     for folder in os.listdir(rom_folder):
         folder_path = os.path.join(rom_folder, folder)
         if os.path.isdir(folder_path):
@@ -105,7 +94,6 @@ def load_roms():
                 if file.lower().endswith((".gb", ".gbc")):
                     roms.append({"name": folder, "path": os.path.join(folder_path, file)})
 
-                    # Cover image
                     cover_path = os.path.join(folder_path, "cover.png")
                     if os.path.exists(cover_path):
                         img = pygame.image.load(cover_path)
@@ -114,7 +102,6 @@ def load_roms():
                         img.fill((60, 60, 60))
                     thumbnails[folder] = img
 
-                    # Description
                     desc_path = os.path.join(folder_path, "desc.txt")
                     if os.path.exists(desc_path):
                         with open(desc_path, "r", encoding="utf-8") as f:
@@ -122,14 +109,12 @@ def load_roms():
                     else:
                         descriptions[folder] = ""
 
-    # If no ROMs found
     if not roms:
         roms = [{"name": "No ROMs found!", "path": None}]
         thumbnails["No ROMs found!"] = pygame.Surface((200, 200))
         thumbnails["No ROMs found!"].fill((60, 60, 60))
         descriptions["No ROMs found!"] = ""
 
-    # Add Settings as a carousel item
     roms.append({"name": "Settings", "path": None})
     thumbnails["Settings"] = pygame.Surface((200, 200))
     thumbnails["Settings"].fill((100, 100, 255))
@@ -138,7 +123,6 @@ def load_roms():
     return roms, thumbnails, descriptions
 
 
-    # Add Settings as a carousel item
     roms.append({"name": "Settings", "path": None})
     thumbnails["Settings"] = pygame.Surface((200, 200))
     thumbnails["Settings"].fill((100, 100, 255))
@@ -148,8 +132,7 @@ def load_roms():
 
 roms, thumbnails, descriptions = load_roms()
 
-# --- BACKGROUND ---
-bg_path = r"Assets\background.png"  # note the raw string r""
+bg_path = r"Assets\background.png" 
 if os.path.exists(bg_path):
     background_img = pygame.image.load(bg_path).convert()
     background_img = pygame.transform.scale(background_img, (screen.get_width(), screen.get_height()))
@@ -157,7 +140,6 @@ else:
     background_img = None
     print("Background not found!")
 
-# --- CAROUSEL VARIABLES ---
 scroll_x = 0.0
 scroll_target = 0.0
 spacing = 300
@@ -167,14 +149,12 @@ running = True
 clock = pygame.time.Clock()
 easing = 0.1
 
-# --- DRAW FUNCTIONS ---
 def draw_carousel():
     if background_img:
         screen.blit(background_img, (0, 0))
     else:
         screen.fill(settings["bg_color"])
 
-    # Optional gradient overlay
     for y in range(screen.get_height()):
         color_val = 15 + int(45 * y / screen.get_height())
         pygame.draw.line(screen, (color_val, color_val, color_val, 30), (0, y), (screen.get_width(), y))
@@ -223,7 +203,6 @@ def draw_carousel():
     screen.blit(font_hint.render(hint_text, True, settings["hint_color"]), (50, 650))
     pygame.display.flip()
 
-# --- SETTINGS DRAW ---
 def draw_settings():
     screen.fill(settings["bg_color"])
     screen.blit(font_title.render("Settings", True, settings["highlight_color"]), (400, 50))
@@ -247,7 +226,6 @@ def draw_settings():
                                  True, settings["hint_color"]), (50, 650))
     pygame.display.flip()
 
-# --- SETTINGS INPUT ---
 def handle_settings_input(event):
     global current_setting_index, in_settings
     opt = settings_options[current_setting_index]
@@ -267,7 +245,6 @@ def handle_settings_input(event):
         in_settings = False
         save_settings()
 
-# --- MAIN LOOP ---
 while running:
     num_roms = len(roms)
     if not in_settings:
@@ -321,3 +298,4 @@ while running:
     clock.tick(60)
 
 pygame.quit()
+
