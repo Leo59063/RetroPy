@@ -22,6 +22,7 @@ RetroPy/
 ├── Roms/                # Folder containing your ROMs
 └── Assets/
      └── background.png  # Optional background image
+```
 
 Downloading Portable Python
 ---------------------------
