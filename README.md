@@ -8,7 +8,7 @@ It runs entirely from a folder without installing Python system-wide.
 Folder Structure
 ----------------
 Your folder should look like this:
-'''text
+```text
 RetroPy/
 ├── retropy.py           # Main launcher script
 ├── Python313/           # Portable Python folder
