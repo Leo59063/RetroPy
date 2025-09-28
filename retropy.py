@@ -9,7 +9,7 @@ os.chdir(BASE_DIR)
 
 pygame.init()
 screen = pygame.display.set_mode((1000, 700))
-pygame.display.set_caption("RetroPy Launcher")
+pygame.display.set_caption("RetroPy")
 
 font_title = pygame.font.SysFont("Arial", 30, bold=True)
 font_desc = pygame.font.SysFont("Arial", 20)
@@ -298,4 +298,5 @@ while running:
     clock.tick(60)
 
 pygame.quit()
+
 
