@@ -1,11 +1,28 @@
-RetroPy Portable Multi-Console Emulator v1.1.0-alpha
+# RetroPy Portable Multi-Console Emulator v1.1.0-alpha
 ***
-This is a portable Python multi-console emulator using PyBoy and Pygame.
+
+This is a portable Python multi-console emulator using PyBoy and Pygame.  
 It allows you to run Game Boy, Game Boy Advance, NES, SNES, N64, GameCube/Wii, and PSP games from a folder — no system-wide Python installation needed.
 
-Folder Structure
+***
+
+## Release Notes v1.1.0-alpha
+
+**New Features:**
+- Added support for NES, SNES, N64, GameCube/Wii, and PSP emulation
+- Users can now configure emulator paths in settings
+
+**Bug Fixes & Optimizations:**
+- Minor bug fixes
+- Performance and carousel optimizations
+- Improved folder detection for ROMs
+
+***
+
+## Folder Structure
 
 Your folder should look like this:
+
 ```text
 RetroPy/
 ├── retropy.py               # Main launcher script
@@ -23,43 +40,43 @@ RetroPy/
      └── icon.png            # Optional launcher icon
 ```
 ***
-Downloading Portable Python
-
+##Downloading Portable Python
 Go to the official Python release page:
 https://www.python.org/downloads/windows/
 
-Download the "Windows embeddable package (64-bit)" for Python 3.13.
+Download the Windows embeddable package (64-bit) for Python 3.13.
 
-Extract the ZIP file into the folder RetroPy/Python313.
-
+Extract the ZIP file into RetroPy/Python313.
 The folder must contain python.exe directly inside it.
 
-(Optional) Add pip if not included:
+Optional: Add pip if not included
 
 Download get-pip.py from https://bootstrap.pypa.io/get-pip.py
-Run: D:\RetroPy\Python313\python.exe get-pip.py
 
+Run:
 
+powershell
+Copy code
+D:\RetroPy\Python313\python.exe get-pip.py
 Open python313._pth in a text editor and remove the # from #import site.
 
-Run PowerShell to create necessary directories:
+Create necessary directories:
 
+powershell
+Copy code
 mkdir D:\Python313\Lib
 mkdir D:\Python313\Lib\site-packages
-***
 Installing Required Packages
-
 Open PowerShell in the RetroPy folder and run:
 
+powershell
+Copy code
 D:\RetroPy\Python313\python.exe -m pip install pyboy pygame
-
-
 This installs PyBoy and Pygame for your portable Python.
 
 Packages are installed inside the Python313 folder.
-***
-Running the Emulator
 
+Running the Emulator
 Ensure your folder structure is intact.
 
 Run the emulator:
@@ -67,32 +84,26 @@ Run the emulator:
 Option A: Double-click retropy.py
 Option B: Run via command line:
 
+powershell
+Copy code
 D:\Python313\python.exe D:\RetroPy\retropy.py
-***
 ROMs
-
 Place your ROM files inside Roms/:
 
-.gb, .gbc → Game Boy / Game Boy Color
-
-.gba → Game Boy Advance
-
-.nes, .fds → NES / Famicom Disk System
-
-.smc, .sfc → SNES
-
-.n64, .z64 → N64
-
-.iso, .gcm → GameCube/Wii
-
-.iso, .cso → PSP
+Console	File extensions
+Game Boy / Game Boy Color	.gb, .gbc
+Game Boy Advance	.gba
+NES / Famicom Disk System	.nes, .fds
+SNES	.smc, .sfc
+N64	.n64, .z64
+GameCube / Wii	.iso, .gcm
+PSP	.iso, .cso
 
 Optional: add cover.png and desc.txt for each ROM to show thumbnails and descriptions.
 
 Subfolders inside Roms/ are supported.
 
 Settings
-
 Access Settings in the launcher to adjust:
 
 Scroll Speed
@@ -118,13 +129,9 @@ Dolphin (GameCube/Wii)
 PPSSPP (PSP)
 
 License
-
-Include your preferred license here. For example:
+Include your preferred license here, for example:
 
 MIT License
 
-Copyright (c) 2025 Leo59063
-
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-
-Enjoy your portable RetroPy v1.1.0-alpha multi-console emulator!
+swift
+Copy code
