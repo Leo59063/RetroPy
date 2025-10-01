@@ -51,7 +51,6 @@ Optional: Add pip if not included
 - Download get-pip.py from https://bootstrap.pypa.io/get-pip.py
 
 - Run:
-powershell
 ```
 D:\RetroPy\Python313\python.exe get-pip.py
 ```
@@ -59,7 +58,6 @@ D:\RetroPy\Python313\python.exe get-pip.py
 
 - Create necessary directories:
 
-powershell
 ```
 mkdir D:\Python313\Lib
 mkdir D:\Python313\Lib\site-packages
@@ -67,7 +65,6 @@ mkdir D:\Python313\Lib\site-packages
 Installing Required Packages
 Open PowerShell in the RetroPy folder and run:
 
-powershell
 ```
 D:\RetroPy\Python313\python.exe -m pip install pyboy pygame
 This installs PyBoy and Pygame for your portable Python.
@@ -82,7 +79,6 @@ Run the emulator:
 Option A: Double-click retropy.py
 Option B: Run via command line:
 
-powershell
 ```
 D:\Python313\python.exe D:\RetroPy\retropy.py
 ```
