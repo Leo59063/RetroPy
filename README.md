@@ -37,7 +37,7 @@ RetroPy/
      └── icon.png            # Optional launcher icon
 ```
 ***
-##Downloading Portable Python
+###Downloading Portable Python
 Go to the official Python release page:
 https://www.python.org/downloads/windows/
 
