@@ -32,8 +32,14 @@ RetroPy/
 │    └── Lib/
 ├── Roms/                    # Folder containing your ROMs
 └── Assets/
-     ├── background.png      # Optional background image
-     └── icon.png            # Optional launcher icon
+|    ├── background.png      # Optional background image
+|    └── icon.png            # Optional launcher icon
+|
+└── emulators/
+     ├── mGBA/
+     ├── ppsspp/
+     └── Dolphin/
+
 ```
 ***
 ## Downloading Portable Python
