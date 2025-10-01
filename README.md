@@ -95,36 +95,35 @@ Place your ROM files inside Roms/:
 | PSP                       | `.iso`, `.cso`  |
 
 
-Optional: add cover.png and desc.txt for each ROM to show thumbnails and descriptions.
-
-Subfolders inside Roms/ are supported.
-
-Settings
+- Optional: add cover.png and desc.txt for each ROM to show thumbnails and descriptions.
+- Subfolders inside Roms/ are supported.
+***
+## Settings
 Access Settings in the launcher to adjust:
 
-Scroll Speed
+- Scroll Speed
 
-Zoom (center & side)
+- Zoom (center & side)
 
-Sound volume
+- Sound volume
 
-ROM folder name
+- ROM folder name
 
-Emulator paths for:
+- Emulator paths for:
 
-Game Boy Advance (mGBA)
+-  Game Boy Advance (mGBA)
 
-NES
+-  NES
 
-SNES
+-  SNES
 
-N64
+-  N64
 
-Dolphin (GameCube/Wii)
+-  Dolphin (GameCube/Wii)
 
-PPSSPP (PSP)
-
-License
+- PPSSPP (PSP)
+***
+## License
 Include your preferred license here, for example:
 
 MIT License
