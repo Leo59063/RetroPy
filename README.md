@@ -84,15 +84,16 @@ D:\Python313\python.exe D:\RetroPy\retropy.py
 ```
 ROMs
 Place your ROM files inside Roms/:
+| Console                   | File extensions |
+| ------------------------- | --------------- |
+| Game Boy / Game Boy Color | `.gb`, `.gbc`   |
+| Game Boy Advance          | `.gba`          |
+| NES / Famicom Disk System | `.nes`, `.fds`  |
+| SNES                      | `.smc`, `.sfc`  |
+| N64                       | `.n64`, `.z64`  |
+| GameCube / Wii            | `.iso`, `.gcm`  |
+| PSP                       | `.iso`, `.cso`  |
 
-Console	File extensions
-Game Boy / Game Boy Color	.gb, .gbc
-Game Boy Advance	.gba
-NES / Famicom Disk System	.nes, .fds
-SNES	.smc, .sfc
-N64	.n64, .z64
-GameCube / Wii	.iso, .gcm
-PSP	.iso, .cso
 
 Optional: add cover.png and desc.txt for each ROM to show thumbnails and descriptions.
 
