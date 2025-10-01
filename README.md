@@ -130,9 +130,10 @@ Access Settings in the launcher to adjust:
   - PPSSPP (PSP)
 ***
 ## License
-Include your preferred license here, for example:
-
 MIT License
 
-swift
+Copyright (c) 2025 Leo59063
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+***
 Copy code
