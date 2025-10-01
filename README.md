@@ -6,7 +6,7 @@ It allows you to run Game Boy, Game Boy Advance, NES, SNES, N64, GameCube/Wii, a
 Folder Structure
 
 Your folder should look like this:
-
+```text
 RetroPy/
 ├── retropy.py               # Main launcher script
 ├── Python313/               # Portable Python folder
@@ -21,6 +21,7 @@ RetroPy/
 └── Assets/
      ├── background.png      # Optional background image
      └── icon.png            # Optional launcher icon
+```
 
 Downloading Portable Python
 
