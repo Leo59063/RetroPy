@@ -50,19 +50,20 @@ Optional: Add pip if not included
 
 - Download get-pip.py from https://bootstrap.pypa.io/get-pip.py
 
-Run:
-
+- Run:
 powershell
 ```
 D:\RetroPy\Python313\python.exe get-pip.py
-Open python313._pth in a text editor and remove the # from #import site.
 ```
-Create necessary directories:
+- Open python313._pth in a text editor and remove the # from #import site.
+
+- Create necessary directories:
 
 powershell
-Copy code
+```
 mkdir D:\Python313\Lib
 mkdir D:\Python313\Lib\site-packages
+```
 Installing Required Packages
 Open PowerShell in the RetroPy folder and run:
 
