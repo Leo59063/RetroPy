@@ -75,7 +75,6 @@ Settings
 
 License
 -------
-Include your preferred license here.
 MIT License
 
 Copyright (c) 2025 Leo59063
