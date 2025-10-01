@@ -1,6 +1,5 @@
 RetroPy Portable Multi-Console Emulator v1.1.0-alpha
-```markdown
-```
+***
 This is a portable Python multi-console emulator using PyBoy and Pygame.
 It allows you to run Game Boy, Game Boy Advance, NES, SNES, N64, GameCube/Wii, and PSP games from a folder — no system-wide Python installation needed.
 
@@ -23,7 +22,7 @@ RetroPy/
      ├── background.png      # Optional background image
      └── icon.png            # Optional launcher icon
 ```
-
+***
 Downloading Portable Python
 
 Go to the official Python release page:
