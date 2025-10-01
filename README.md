@@ -46,7 +46,7 @@ Run PowerShell to create necessary directories:
 
 mkdir D:\Python313\Lib
 mkdir D:\Python313\Lib\site-packages
-
+***
 Installing Required Packages
 
 Open PowerShell in the RetroPy folder and run:
@@ -57,7 +57,7 @@ D:\RetroPy\Python313\python.exe -m pip install pyboy pygame
 This installs PyBoy and Pygame for your portable Python.
 
 Packages are installed inside the Python313 folder.
-
+***
 Running the Emulator
 
 Ensure your folder structure is intact.
@@ -68,7 +68,7 @@ Option A: Double-click retropy.py
 Option B: Run via command line:
 
 D:\Python313\python.exe D:\RetroPy\retropy.py
-
+***
 ROMs
 
 Place your ROM files inside Roms/:
