@@ -8,14 +8,11 @@ It allows you to run Game Boy, Game Boy Advance, NES, SNES, N64, GameCube/Wii, a
 
 ## Release Notes v1.1.0-alpha
 
-**New Features:**
+**Updates:**
 - Added support for NES, SNES, N64, GameCube/Wii, and PSP emulation
 - Users can now configure emulator paths in settings
-
-**Bug Fixes & Optimizations:**
 - Minor bug fixes
-- Performance and carousel optimizations
-- Improved folder detection for ROMs
+
 
 ***
 
@@ -70,10 +67,10 @@ Installing Required Packages
 Open PowerShell in the RetroPy folder and run:
 
 powershell
-Copy code
+```
 D:\RetroPy\Python313\python.exe -m pip install pyboy pygame
 This installs PyBoy and Pygame for your portable Python.
-
+```
 Packages are installed inside the Python313 folder.
 
 Running the Emulator
@@ -85,8 +82,9 @@ Option A: Double-click retropy.py
 Option B: Run via command line:
 
 powershell
-Copy code
+```
 D:\Python313\python.exe D:\RetroPy\retropy.py
+```
 ROMs
 Place your ROM files inside Roms/:
 
