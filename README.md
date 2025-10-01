@@ -111,17 +111,17 @@ Access Settings in the launcher to adjust:
 
 - Emulator paths for:
 
--  Game Boy Advance (mGBA)
+  - Game Boy Advance (mGBA)
 
--  NES
+  - NES
 
--  SNES
+  - SNES
 
--  N64
+  - N64
 
--  Dolphin (GameCube/Wii)
+  - Dolphin (GameCube/Wii)
 
-- PPSSPP (PSP)
+  - PPSSPP (PSP)
 ***
 ## License
 Include your preferred license here, for example:
