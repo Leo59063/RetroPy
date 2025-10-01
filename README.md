@@ -68,7 +68,8 @@ D:\RetroPy\Python313\python.exe get-pip.py
 mkdir D:\Python313\Lib
 mkdir D:\Python313\Lib\site-packages
 ```
-Installing Required Packages
+***
+## Installing Required Packages
 Open PowerShell in the RetroPy folder and run:
 
 ```
