@@ -38,12 +38,12 @@ RetroPy/
 ***
 ## Downloading Portable Python
 
-Go to the official Python release page:
+1.Go to the official Python release page:
 https://www.python.org/downloads/windows/
 
-Download the Windows embeddable package (64-bit) for Python 3.13.
+2.Download the Windows embeddable package (64-bit) for Python 3.13.
 
-Extract the ZIP file into RetroPy/Python313.
+3.Extract the ZIP file into RetroPy/Python313.
 The folder must contain python.exe directly inside it.
 
 Optional: Add pip if not included
